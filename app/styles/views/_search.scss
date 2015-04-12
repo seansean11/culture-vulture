@@ -78,17 +78,34 @@
         	}
         }
     }
-    .event-title h2 {
-        background-color: rgb(255, 211, 211);
-        float: left;
-        display: block;
-        margin-bottom: -12px;
-        margin-left: 20px;
-        font-size: 19px;
-        margin-top: 0px;
-        padding: 6px;
-        text-transform: uppercase;
-    }
+    .event-title {
+		&.music {
+
+        }
+        &.arts {
+			background-color:#cdd1b2;
+        }
+        &.community {
+			background-color:#fac4a7;
+        }
+        &.sights {
+        	background-color:#c6dad9;
+        }
+	    
+	    h2 {
+	        background-color: rgb(255, 211, 211);
+	        float: left;
+	        display: block;
+	        margin-bottom: -12px;
+	        margin-left: 20px;
+	        font-size: 19px;
+	        margin-top: 0px;
+	        padding: 6px;
+	        text-transform: uppercase;
+
+	       
+	    }
+	}
     [class*="icon-"] {
         position: absolute;
         left: -25px;
@@ -105,3 +122,45 @@
         }
     }
 }
+
+
+// .farmersmarket {
+
+// 	.icon-general {
+// 		&:before {
+// 			content: "\e601";
+// 		}
+// 		&.circle {
+// 			background-color: $color-orange;
+// 			color: #fff;
+// 			font-size: 26px;
+// 		}
+// 	}
+
+// }
+
+// .music {
+// 	.icon-general {
+// 		&:before {
+// 			content: "\e603";
+// 		}
+// 		&.circle {
+// 			background-color: $color-brown;
+// 			color: #fff;
+// 		}
+// 	}
+
+// }
+
+// .arts {
+// 	.icon-arts{
+// 		&:before {
+// 			content: "\e600";
+// 		}
+// 		&.circle {
+// 			background-color: $color-green;
+// 			color: #fff;
+// 			font-size: 28px;
+// 		}
+// 	}
+// }
