@@ -28,10 +28,6 @@ angular.module('cultureVultureApp')
         cat: 'music'
       },
       {
-        name: 'Events',
-        cat: 'events'
-      },
-      {
         name: 'Arts',
         cat: 'arts'
       },
