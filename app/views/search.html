@@ -1,9 +1,10 @@
 <div class="col-xs-12 col-md-12">
 	<div class="filters">
 		<ul class="filters-category">
-			<li ng-repeat="category in categories">
+			<li ng-repeat="category in categories" class="">
 				<label for="{{ category.cat }}">
 				<input id="{{ category.cat }}" ng-click="filterToggle(category.cat);" name="{{ category.cat }}" type="checkbox"><span class="icon-{{ category.cat }} circle"></span><span>{{ category.name }}</span></label>
+
 			</li>
 		</ul>
 	</div>
@@ -13,9 +14,9 @@
 
 <div class="col-xs-12 col-md-12 u-no-padding">
 	<ul class="event-list-view view-list">
-		<li class="list-item category-music" ng-repeat="event in events">
-			<span class="icon-music circle"></span>
-			<div class="event-title">
+		<li class="list-item category-music {{event._source.subcategory}}" ng-repeat="event in events">
+			<span class="icon-{{event._type}} circle"></span>
+			<div class="event-title {{event._type}}">
 				<h2>
 					<a href="#/event/{{ event._id }}">	
 						{{event._source.title}}
