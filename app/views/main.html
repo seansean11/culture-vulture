@@ -1,7 +1,15 @@
-<div class="header-search">
-  <h1 class="logo">Culture Vulture</h1>
-  <form ng-submit="search()">
-    <input ng-model="query" type="text">
-    <button type="submit">Submit</button>
-  </form>
+
+<div class="top-section">
+
+	<div class="header-search">
+	  <h1 class="logo">Culture Vulture</h1>
+	  <form class="search-form" ng-submit="search()">
+	  	<div class="search-wrapper">
+		    <input class="search-main" ng-model="query" type="text" placeholder="Search for Event">
+		    <input class="search-date" ng-model="query" type="text" placeholder="date">
+		   
+		    <button class="search-submit" type="submit">Go!</button>
+	    </div>
+	  </form>
+	</div>
 </div>
