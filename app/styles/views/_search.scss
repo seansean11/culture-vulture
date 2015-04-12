@@ -3,7 +3,105 @@
 // --------------------------------------------------
 
 .filters-category {
+	width:100%;
 	@extend %menu-zero;
-	border: 1px solid #E7E7E7;
+	
 	background-color: #eee;
+	li {
+		float:left;
+		padding:10px;
+	}
+	input[type=checkbox] {
+    display:none;
+  }
+
+  input[type=checkbox] + span
+   {
+       
+       display:inline-block;
+       padding: 0 0 0 0px;
+       opacity:0.5;
+       float:left;
+   }
+
+   input[type=checkbox] + span + span {
+
+   		  opacity: .5;
+  float: left;
+  padding-top: 16px;
+  padding-left: 7px;
+   }
+   
+   input[type=checkbox]:checked + span
+    {
+       
+     
+        display:inline-block;
+        padding: 0 0 0 0px;
+        opacity:1;
+    }
+
+    input[type=checkbox]:checked + span + span
+    {
+		opacity:1;
+    }
+}
+
+
+.event-list-view {
+    width: 100%;
+    cursor: pointer;
+    .list-item {
+        width: 100%;
+        list-style: none;
+        position: relative;
+        margin-top: 21px;
+        &:hover {
+	    	.event-title {
+	    		background-color: $color-brown;
+        	}
+        }     
+    }
+    .event-title {
+        background-color: $color-lightbrown;
+        width: 100%;
+        padding: 12px;
+        display: block;
+        padding-left: 30px;
+        overflow: hidden;
+        transition: background-color 0.5s;
+        a {
+        	color:black;
+        	text-decoration: none;
+        	&:hover {
+				text-decoration: none;
+        	}
+        }
+    }
+    .event-title h2 {
+        background-color: rgb(255, 211, 211);
+        float: left;
+        display: block;
+        margin-bottom: -12px;
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 0px;
+        padding: 6px;
+        text-transform: uppercase;
+    }
+    [class*="icon-"] {
+        position: absolute;
+        left: -25px;
+        top: -6px;
+    }
+    .event-info > div {
+        float: left;
+        font-size: 14px;
+    }
+    .event-info {
+        padding: 10px 10px 20px 20px;
+        a {
+        	color:black;
+        }
+    }
 }

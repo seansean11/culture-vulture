@@ -47,6 +47,7 @@ angular.module('cultureVultureApp')
     $scope.filterToggle = function(filter) {
       var query = '';
       
+      
       if($scope.currentFilter !== filter) {
         query = '_type:' + filter;
       }
