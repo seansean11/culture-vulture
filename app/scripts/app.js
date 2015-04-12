@@ -16,19 +16,21 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngProgress'
+    'angular-loading-bar',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('main', {
+        url: '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/search', {
+      .state('/search', {
+        url: '/search?q',
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
   });

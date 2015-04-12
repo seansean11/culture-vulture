@@ -1,7 +1,14 @@
-<p>This is the about view.</p>
+<div class="col-xs-12 col-md-4">
+	<div class="filters">
+		
+	</div>
+</div>
 
-<ul>
-	<li ng-repeat="event in events">
-		<h2><a href="">{{event.title}}</a></h2>{{}}
-	</li>
-</ul>
+<div class="col-xs-12 col-md-8">
+	<ul class="view-list">
+		<li class="" ng-repeat="event in events">
+			<h2><a href="">{{event.title}}</a></h2>
+			<img src="{{event.img}}">
+		</li>
+	</ul>
+</div>

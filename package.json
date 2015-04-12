@@ -2,7 +2,6 @@
   "name": "culturevulture",
   "version": "0.0.0",
   "dependencies": {
-    "angular-ui-router": "^0.2.13",
     "satellizer": "^0.9.4"
   },
   "repository": {},

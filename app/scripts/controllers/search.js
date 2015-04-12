@@ -8,8 +8,7 @@
  * Controller of the cultureVultureApp
  */
 angular.module('cultureVultureApp')
-  .controller('SearchCtrl', function ($scope, ngProgress) {
-    ngProgress.complete();
+  .controller('SearchCtrl', function ($scope) {
 
     var mockData = [
       {
