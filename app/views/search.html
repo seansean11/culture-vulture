@@ -16,13 +16,21 @@
 		<li class="list-item category-music" ng-repeat="event in events">
 			<span class="icon-music circle"></span>
 			<div class="event-title">
-				<h2><a href="#/event/{{ event._id }}">{{event._source.title}}</a></h2>
+				<h2>
+					<a href="#/event/{{ event._id }}">	
+						{{event._source.title}}
+					</a>
+				</h2>
 			</div>
 			<div class="event-info">
 				<a href="#/event/{{ event._id }}">
 					<div class="date col-md-2">{{event._source.start_date }}</div>
-					<div class="location col-md-2">Red Rocks</div>
-					<div class="street col-md-2">1234 Colorado Blvd</div>
+					
+					<div class="street col-md-8">
+						{{event._source.description }}
+
+
+					1234 Colorado Blvd</div>
 					<div class="tickets col-md-2">Buy Tickets</div>
 				</a>
 			</div>
