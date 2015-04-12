@@ -186,4 +186,55 @@
 	}
 
 }
+.event-list-view {
+    width: 100%;
+    cursor: pointer;
+    .list-item {
+        width: 100%;
+        list-style: none;
+        position: relative;
+        margin-top: 21px;
+        &:hover {
+	    	.event-title {
+	    		background-color: $color-brown;
+        	}
+        }     
+    }
+    .event-title {
+        background-color: $color-lightbrown;
+        width: 100%;
+        padding: 12px;
+        display: block;
+        padding-left: 30px;
+        overflow: hidden;
+        transition: background-color 0.5s;
+    }
+    .event-title h2 {
+        background-color: rgb(255, 211, 211);
+        float: left;
+        display: block;
+        margin-bottom: -12px;
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 0px;
+        padding: 6px;
+        text-transform: uppercase;
+    }
+    [class*="icon-"] {
+        position: absolute;
+        left: -25px;
+        top: -6px;
+    }
+    .event-info > div {
+        float: left;
+        font-size: 14px;
+    }
+    .event-info {
+        padding: 10px 10px 20px 20px;
+    }
+}
 
+
+.u-no-padding{
+	padding:0px;
+}
