@@ -5,8 +5,9 @@
 .header-event {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 2em;
-	overflow: hidden;
+
+	.event-title {
+		background-color: rgba($color-orange, .5);
+	}
 }
-.filters-category input:checked {
-	
-}
+
