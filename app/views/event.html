@@ -1,16 +1,29 @@
-<header class="header-event">
+<header class="header-event event-list-view col-md-8 col-xs-12">
 	<div class="list-item category-{{ event._type }}">
 		<span class="icon-{{ event._type }} circle"></span>
 		<div class="event-title">
-			<h2>{{event._source.title}}</h2>
+			<h2>Denver, March 12</h2>
 		</div>
 	</div>
+	
 </header>
 
 <div class="col-md-8 col-xs-12">
-	<p>some text</p>
+	<h2><strong>{{event._source.title}}</strong></h2>
+	<br>
+	<h4><strong>March 12, 2015 - April 16, 2015</strong></h4>
+
+<p>Local: 303-590-9800
+Email: info@mikewrightgallery.com 
+Booking Email: info@mikewrightgallery.com</p>
+
+<h4><strong>Overview</strong></h4>
+<p>Dramatic and delicate. Introspective and nostalgic. Ephemeral. Clever and humorous. The works in group show "Analog" masterfully demonstrate the evocative range of photography using unique methodology in traditional analog processes. Mike Wright Gallery has assembled a diverse roster of artists working in alternative processes, challenging the digital age. Opening March 12th, the exhibition will feature the work of Jeff Klapperich, Joe Addison, Carol Golemboski, Bill Adams, Galina Kurlat, Ted Preuss and Keith Brenner.</p>
+
+<img src="/images/temp.jpg" alt="gal">
+
 </div>
 
-<div class="col-md-4 col-xs-12">
-	<img src="{{ event.img }}" alt="{{ event.title }}">
+<div class="advertisement col-md-4 col-xs-12">
+	<p>Google Advertisement</p>
 </div>
