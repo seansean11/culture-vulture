@@ -9,6 +9,8 @@
  */
 angular.module('cultureVultureApp')
   .controller('EventCtrl', function ($scope, singleEvent) {
-    $scope.event = singleEvent;
+    $scope.event = singleEvent.data.hits[0];
+    
+    $scope.event
   });
 
