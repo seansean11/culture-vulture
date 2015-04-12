@@ -8,10 +8,9 @@
  * Controller of the cultureVultureApp
  */
 angular.module('cultureVultureApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, ngProgress, Event, $location) {
+      $scope.search = function() {
+        ngProgress.start();
+        $location.url('/search');
+      };
   });
