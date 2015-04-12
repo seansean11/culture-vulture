@@ -21,7 +21,6 @@ angular.module('cultureVultureApp')
     }).error(function(error) {
         console.log(error);
     });
-    
 
     $scope.categories = [
       {

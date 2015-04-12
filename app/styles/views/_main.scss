@@ -28,12 +28,22 @@
 	margin:0 auto;
 }
 
+.tagline {
+	width:100%;
+	text-align:center;
+	  float: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 23px;
+  color:#574520;
+}
+
 .search-wrapper  {
-	border:4px solid $vulture-blue;
+	border: 1px solid $vulture-blue;
 	width:80%;
 	margin:50px auto;
 	overflow:hidden;
-	border-radius: 29px;
+	
 	@include media(768px,max-width) {
 		width:100%;
 	}
@@ -67,16 +77,16 @@
 
 .upcoming-events {
 	h2 {
-		background-color:$vulture-yellow;
-		  padding: 10px;
-		  color: white;
-		  text-transform: uppercase;
-		  font-size: 17px;
-		  font-weight: bold;
-		  border-top-left-radius: 10px;
-		  border-bottom-right-radius: 10px;
+		background-color:$vulture-yellow
+		padding: 10px;
+		color: white;
+		text-transform: uppercase;
+		font-size: 17px;
+		font-weight: bold;
+		border-top-left-radius: 10px;
+		border-bottom-right-radius: 10px;
 	}
-	
+
 	.event-item {
 	  	min-height: 146px;
 	  	line-height: 1.2em;
@@ -178,3 +188,55 @@
 
 }
 
+.event-list-view {
+    width: 100%;
+    cursor: pointer;
+    .list-item {
+        width: 100%;
+        list-style: none;
+        position: relative;
+        margin-top: 21px;
+        &:hover {
+	    	.event-title {
+	    		background-color: $color-brown;
+        	}
+        }     
+    }
+    .event-title {
+        background-color: $color-lightbrown;
+        width: 100%;
+        padding: 12px;
+        display: block;
+        padding-left: 30px;
+        overflow: hidden;
+        transition: background-color 0.5s;
+    }
+    .event-title h2 {
+        background-color: rgb(255, 211, 211);
+        float: left;
+        display: block;
+        margin-bottom: -12px;
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 0px;
+        padding: 6px;
+        text-transform: uppercase;
+    }
+    [class*="icon-"] {
+        position: absolute;
+        left: -25px;
+        top: -6px;
+    }
+    .event-info > div {
+        float: left;
+        font-size: 14px;
+    }
+    .event-info {
+        padding: 10px 10px 20px 20px;
+    }
+}
+
+
+.u-no-padding{
+	padding:0px;
+}

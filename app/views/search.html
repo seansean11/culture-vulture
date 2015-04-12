@@ -11,8 +11,10 @@
 <div class="col-xs-12 col-md-8">
 	<ul class="view-list">
 		<li class="" ng-repeat="event in events">
+
 			<h2><a href="#/event/{{ event._id }}">{{event._source.title}}</a></h2>
 			<p>{{event._date }}</p>
+
 		</li>
 	</ul>
 </div>

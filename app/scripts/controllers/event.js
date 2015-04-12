@@ -11,3 +11,4 @@ angular.module('cultureVultureApp')
   .controller('EventCtrl', function ($scope, singleEvent) {
     $scope.event = singleEvent;
   });
+

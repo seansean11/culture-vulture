@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     // 'angular-loading-bar',
-    'ui.router',
+    'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
