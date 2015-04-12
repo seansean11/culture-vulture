@@ -29,7 +29,7 @@ angular
         controller: 'MainCtrl'
       })
       .state('search', {
-        url: '/search?q?size',
+        url: '/search?q?size?cat',
         templateUrl: 'views/search.html',
         controller: 'SearchCtrl',
       })

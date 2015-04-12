@@ -17,4 +17,8 @@ angular.module('cultureVultureApp')
 
         $state.go('search', {q: $scope.query, size: 100});
       };
+
+      $scope.fakeClick = function(cat) {
+        $state.go('search', {q: $scope.query, size: 100, cat: cat});
+      }
   });
