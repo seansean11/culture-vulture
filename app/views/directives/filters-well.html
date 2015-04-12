@@ -1,0 +1,7 @@
+<div class="filters">
+	<ul class="filters-category">
+		<li ng-repeat="category in categories">
+			<input type="checkbox"><a ng-click="filterToggle(category.cat)">{{ category.name }}</a>
+		</li>
+	</ul>
+</div>

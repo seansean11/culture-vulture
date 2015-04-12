@@ -16,8 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'angular-loading-bar',
-    'ui.router'
+    // 'angular-loading-bar',
+    'ui.router',
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -38,8 +38,14 @@ angular
         templateUrl: 'views/event.html',
         controller: 'EventCtrl',
         resolve: {
-          singleEvent: function($stateParams, Event) {
-            return Event.get($stateParams.id);
+          singleEvent: function($stateParams, Event, $http) {
+            var query = '_id:' + $stateParams.id;
+            
+            return $http({ 
+              url: 'http://culture-vulture.rocks/es/events/_search', 
+              method: 'GET', 
+              params: { q: query }
+            });
           }
         }
       });

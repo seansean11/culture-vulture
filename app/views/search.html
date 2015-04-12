@@ -2,7 +2,7 @@
 	<div class="filters">
 		<ul class="filters-category">
 			<li ng-repeat="category in categories">
-				<a ng-click="filterToggle(category.cat)">{{ category.name }}</a>
+				<label for="{{ category.cat }}"><input id="{{ category.cat }}" ng-click="filterToggle(category.cat)" name="{{ category.cat }}" type="checkbox">{{ category.name }}</label>
 			</li>
 		</ul>
 	</div>
@@ -11,9 +11,8 @@
 <div class="col-xs-12 col-md-8">
 	<ul class="view-list">
 		<li class="" ng-repeat="event in events">
-			<h2><a ui-sref="event({id: {{ event.id }} })">{{event.title}}</a></h2>
-			<img src="{{event.img}}">
-			<p>{{event.date | date: 'short'}}</p>
+			<h2><a href="#/event/{{ event._id }}">{{event._source.title}}</a></h2>
+			<p>{{event._date }}</p>
 		</li>
 	</ul>
 </div>

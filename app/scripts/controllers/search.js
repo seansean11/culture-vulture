@@ -8,42 +8,20 @@
  * Controller of the cultureVultureApp
  */
 angular.module('cultureVultureApp')
-  .controller('SearchCtrl', function ($scope) {
-
-    var mockData = [
-      {
-        id: 1234556,
-        title: 'Tonight We Rise',
-        cat: 'music',
-        date: new Date('April 13, 2015 09:00:00'),
-        venue: 'Gothic Theatre',
-        address: '12345 W Colorado Street',
-        geo: {
-          lat: 39.659363,
-          long: -104.988785
-        },
-        img: 'http://userserve-ak.last.fm/serve/_/15575343/Gothic+Theatre+httpwwwgothictheatrecom.jpg',
-        url: 'http://www.gothictheatre.com/'
-      },
-      {
-        id: 1234557,
-        title: 'Tonight We Rise',
-        cat: 'arts',
-        date: new Date('April 13, 2015 09:00:00'),
-        venue: 'Gothic Theatre',
-        address: '12345 W Colorado Street',
-        geo: {
-          lat: 39.659363,
-          long: -104.988785
-        },
-        img: 'http://userserve-ak.last.fm/serve/_/15575343/Gothic+Theatre+httpwwwgothictheatrecom.jpg',
-        url: 'http://www.gothictheatre.com/'
-      }
-    ];
+  .controller('SearchCtrl', function ($scope, $http, $stateParams) {
 
     // GET all events
-    // var events = $scope.events = Event.query();
-    $scope.events = mockData;
+    $http({ 
+      method: 'GET', 
+      params: $stateParams, 
+      url: 'http://culture-vulture.rocks/es/events/_search' 
+    }).success(function(data) {
+        $scope.events = data.hits.hits;
+        console.log($scope.events);
+    }).error(function(error) {
+        console.log(error);
+    });
+    
 
     $scope.categories = [
       {
@@ -68,15 +46,21 @@ angular.module('cultureVultureApp')
       },
     ];
 
-    $scope.filterArr = [];
+    $scope.currentFilter = '';
 
     $scope.filterToggle = function(filter) {
-      var exists = $scope.filterArr.indexOf(filter);
-
-      if(exists > -1) {
-        $scope.filterArr.splice(exists, 1);
-      } else {
-        $scope.filterArr.push(filter);
+      var query = '';
+      
+      if($scope.currentFilter !== filter) {
+        query = '_type:' + filter;
       }
+
+      $http({ 
+        url: 'http://culture-vulture.rocks/es/events/_search', 
+        method: 'GET', 
+        params: { q: query }
+      }).success(function(data) {
+        $scope.events = data.hits.hits;
+      });
     };
   });
