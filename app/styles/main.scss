@@ -8,6 +8,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // Helper SASS
 // --------------------------------------------------
 @import "utility/variables";
+@import "utility/fonts";
 @import "utility/mixins";
 @import "utility/placeholders";
 @import "utility/typography";
@@ -16,6 +17,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // Views SASS
 // --------------------------------------------------
 @import "views/main";
+@import "views/event";
 
 // --------------------------------------------------
 // Yeoman CSS
@@ -29,6 +31,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

@@ -1,8 +1,6 @@
 // --------------------------------------------------
 // TYPOGRAPHY
 // --------------------------------------------------
-@import url(http://fonts.googleapis.com/css?family=Raleway:500,700,300);
-
 @mixin font-light() {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -21,7 +19,6 @@
 // --------------------------------------------------
 // MEDIA QUERIES
 // --------------------------------------------------
-
 @mixin media($value, $operator: 'min-width', $query: 'screen') {
   @media #{$query} and (#{$operator}: #{$value}) {
     @content;

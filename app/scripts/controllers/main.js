@@ -8,9 +8,9 @@
  * Controller of the cultureVultureApp
  */
 angular.module('cultureVultureApp')
-  .controller('MainCtrl', function ($scope, Event, $location) {
+  .controller('MainCtrl', function ($scope, Event, $state) {
 
       $scope.search = function() {
-        $location.url('/search?q=' + $scope.query);
+        $state.go('search', {q: $scope.query});
       };
   });

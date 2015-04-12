@@ -28,9 +28,19 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .state('/search', {
+      .state('search', {
         url: '/search?q',
         templateUrl: 'views/search.html',
-        controller: 'SearchCtrl'
+        controller: 'SearchCtrl',
+      })
+      .state('event', {
+        url: '/event/:id',
+        templateUrl: 'views/event.html',
+        controller: 'EventCtrl',
+        resolve: {
+          singleEvent: function($stateParams, Event) {
+            return Event.get($stateParams.id);
+          }
+        }
       });
   });

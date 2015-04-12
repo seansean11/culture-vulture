@@ -1,14 +1,19 @@
 <div class="col-xs-12 col-md-4">
 	<div class="filters">
-		
+		<ul class="filters-category">
+			<li ng-repeat="category in categories">
+				<a ng-click="filterToggle(category.cat)">{{ category.name }}</a>
+			</li>
+		</ul>
 	</div>
 </div>
 
 <div class="col-xs-12 col-md-8">
 	<ul class="view-list">
 		<li class="" ng-repeat="event in events">
-			<h2><a href="">{{event.title}}</a></h2>
+			<h2><a ui-sref="event({id: {{ event.id }} })">{{event.title}}</a></h2>
 			<img src="{{event.img}}">
+			<p>{{event.date | date: 'short'}}</p>
 		</li>
 	</ul>
 </div>
