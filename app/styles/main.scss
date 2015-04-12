@@ -7,10 +7,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // --------------------------------------------------
 // Helper SASS
 // --------------------------------------------------
-@import "variables";
-@import "mixins";
-@import "placeholders";
-@import "typography";
+@import "utility/variables";
+@import "utility/mixins";
+@import "utility/placeholders";
+@import "utility/typography";
 
 // --------------------------------------------------
 // Yeoman CSS
