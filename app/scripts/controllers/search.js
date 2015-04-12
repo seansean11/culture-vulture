@@ -10,6 +10,7 @@
 angular.module('cultureVultureApp')
   .controller('SearchCtrl', function ($scope, $http, $stateParams) {
 
+    console.log($stateParams);
     // GET all events
     $http({ 
       method: 'GET', 

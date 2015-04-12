@@ -11,6 +11,10 @@ angular.module('cultureVultureApp')
   .controller('MainCtrl', function ($scope, Event, $state) {
 
       $scope.search = function() {
-        $state.go('search', {q: $scope.query});
+        if($scope.query == undefined) {
+          $scope.query = '*';
+        }
+
+        $state.go('search', {q: $scope.query, size: 100});
       };
   });
