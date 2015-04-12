@@ -12,7 +12,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/bootstrap-yeti.css">
     <!-- endbuild -->
   </head>
   <body ng-app="cultureVultureApp">
@@ -21,10 +20,12 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div ng-include="'views/includes/signup.html'"></div>
+    <div ng-include="'views/includes/login.html'"></div>
     <div ng-include="'views/includes/header.html'"></div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <div ng-view=""></div>
     </div>
 
     <div class="footer">
