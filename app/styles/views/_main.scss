@@ -101,3 +101,77 @@
 		}
 	}
 }
+
+.categories {
+	[class*="category-"] {
+		line-height:3.5em;
+		[class*="icon-"] {
+			float:left;
+			margin-right:10px;
+		}
+		.title {
+			position: relative;
+			display: inline-block;
+			/* width: 100%; */
+			overflow: hidden;
+			color:$vulture-blue;
+			font-size:25px;
+			text-transform:uppercase;
+			@include media(1300px,max-width) {
+				font-size:20px;
+			}
+			@include media(1000px,max-width) {
+				font-size:17px;
+			}
+			@include media(900px,max-width) {
+			font-size:15px;
+
+			}
+
+			&:after {
+				  display: block;
+				  content: '';
+				  height: 3px;
+				  background-color: $color-brown;
+				  position: absolute;
+				  bottom: 13px;
+				  width: 0%;
+	  			/* left: 62px; */
+	  			transition:width .5s;
+			}
+		}
+		&:hover {
+			.title{
+				&:after{
+					width:100%;
+				}
+			}
+		}
+	}
+	[class*="-music"]:hover .title {
+		color:$color-brown;
+		&:after{
+			background-color:$color-brown;
+		}
+	}
+	[class*="-arts"]:hover .title {
+		color:$color-green;
+		&:after {
+			background-color:$color-green;
+		}
+	}
+	[class*="-community"]:hover .title {
+		color:$color-orange;
+		&:after {
+			background-color:$color-orange;
+		}
+	}
+	[class*="-sights"]:hover .title {
+		color:$color-blue;
+		&:after {
+			background-color:$color-blue;
+		}
+	}
+
+}
+
