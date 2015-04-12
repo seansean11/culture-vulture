@@ -22,7 +22,7 @@
 .header-search {
 	text-align: center;
 }
-
+  
 .top-logo {
 	width:50%;
 	margin:0 auto;
@@ -38,31 +38,31 @@
 		width:100%;
 	}
 	.search-main {
-		  width: 60%;
+		  width: 100%;
 		  float: left;
 		  padding: 4px 4px 4px 17px;
 		  font-size: 12px;
 		  text-transform: uppercase;
 		  font-weight: normal;
 	}
-	.search-date {
-		width:20%;
-		float:left;
-		padding: 4px 4px 4px 17px;
-		  font-size: 12px;
-		  text-transform: uppercase;
-		  font-weight: normal;
-	}
-	.search-submit {
-		width:20%;
-		float:right;
-		  background-color: #f36b21;
-		  border: none;
-		  outline: 0;
-		  color: white;
-		  padding: 3px;
-		  margin: 0px;
-	}
+	// .search-date {
+	// 	width:20%;
+	// 	float:left;
+	// 	padding: 4px 4px 4px 17px;
+	// 	  font-size: 12px;
+	// 	  text-transform: uppercase;
+	// 	  font-weight: normal;
+	// }
+	// .search-submit {
+	// 	width:20%;
+	// 	float:right;
+	// 	  background-color: #f36b21;
+	// 	  border: none;
+	// 	  outline: 0;
+	// 	  color: white;
+	// 	  padding: 3px;
+	// 	  margin: 0px;
+	// }
 }
 
 .upcoming-events {
@@ -121,11 +121,14 @@
 				font-size:20px;
 			}
 			@include media(1000px,max-width) {
-				font-size:17px;
+				font-size:15px;
 			}
 			@include media(900px,max-width) {
-			font-size:15px;
+				font-size:15px;
 
+			}
+			@include media(768px,max-width) {
+				font-size:25px;
 			}
 
 			&:after {
